@@ -82,6 +82,18 @@
     .call-button { flex:0 0 39px; height:39px; display:grid; place-items:center; border-radius:50%; color:#fff; background:#81ae89; text-decoration:none; font-size:17px; transition:transform .2s,background .2s; }
     .call-button:hover { transform:scale(1.1); background:#668f70; }
     .call-button:focus-visible { outline:3px solid var(--rose); outline-offset:3px; }
+    .program { position:relative; max-width:990px; margin:27px auto 0; padding:30px clamp(23px,5vw,52px) 34px; border-radius:26px; background:rgba(255,253,249,.9); border:1px solid rgba(255,255,255,.95); box-shadow:0 16px 45px rgba(99,58,80,.09); overflow:hidden; }
+    .program::after { content:'✿'; position:absolute; right:18px; top:-27px; color:#f4d7d5; opacity:.65; font-size:90px; transform:rotate(18deg); pointer-events:none; }
+    .program-heading { margin:0 0 24px; color:#8f674e; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.16em; display:flex; align-items:center; gap:10px; }
+    .program-heading span { color:#bd8c5c; font-size:20px; }
+    .program-list { list-style:none; position:relative; margin:0; padding:0 0 0 30px; }
+    .program-list::before { content:''; position:absolute; top:11px; bottom:12px; left:9px; width:2px; background:linear-gradient(#efabc0,#f3c6b2,#dfc3df); border-radius:3px; }
+    .program-item { position:relative; padding:0 0 22px; }
+    .program-item:last-child { padding-bottom:0; }
+    .program-item::before { content:''; position:absolute; left:-27px; top:3px; width:13px; height:13px; border-radius:50%; background:#89556c; border:5px solid #f8dce4; box-sizing:content-box; box-shadow:0 0 0 2px #fff7f5; }
+    .program-time { display:block; margin:0 0 4px; color:#9b6876; font-size:12px; font-weight:800; letter-spacing:.06em; }
+    .program-item h3 { margin:0; color:#453a3d; font-size:17px; line-height:1.35; font-weight:700; }
+    .program-item p { margin:4px 0 0; color:#867781; font-size:13px; line-height:1.55; }
     .closing { margin:31px auto 0; text-align:center; color:#a77689; font:italic 17px 'Playfair Display',serif; }
     .closing span { display:inline-block; color:var(--rose); animation:heartbeat 1.8s infinite; }
     .flower-confetti { position:absolute; z-index:4; pointer-events:none; top:-30px; font-size:17px; animation:rain linear forwards; }
@@ -153,6 +165,14 @@
             <div class="rsvp-contact"><div class="rsvp-person"><strong>Mahendrabhai Patel</strong><a href="tel:+919376988051">+91 93769 88051</a></div><a class="call-button" href="tel:+919376988051" aria-label="Call Mahendrabhai Patel">☎</a></div>
           </div>
         </section>
+      </section>
+      <section class="program reveal" aria-labelledby="program-title">
+        <h2 class="program-heading" id="program-title"><span aria-hidden="true">✧</span> Program highlights</h2>
+        <ol class="program-list">
+          <li class="program-item"><time class="program-time" datetime="19:00">07:00 PM</time><h3>Welcome &amp; Warm Drinks / Appetizers</h3><p>Arrival of loving guests and fairy mocktails</p></li>
+          <li class="program-item"><time class="program-time" datetime="20:00">08:00 PM</time><h3>Grand Cake Cutting &amp; Blessings</h3><p>Cheering for baby Hiya's first birthday milestone</p></li>
+          <li class="program-item"><time class="program-time" datetime="20:30">08:30 PM</time><h3>Royal Dinner &amp; Sweet Treats</h3><p>Lavish banquet feast and celebratory desserts</p></li>
+        </ol>
       </section>
       <p class="closing reveal">We can't wait to celebrate with you <span>♥</span></p>
     </div>
