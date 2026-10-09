@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff3ee" />
+  <meta name="description" content="Come celebrate Hiya Patel's first birthday on 15 October 2026." />
+  <title>Hiya Turns One! | Birthday Celebration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Pacifico&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    :root { --pink:#f59caf; --rose:#dc5877; --coral:#f47f68; --plum:#583954; --ink:#513b4b; --gold:#f0bf5f; --mint:#a9cbb1; --cream:#fff6ef; --lilac:#c9b2d8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:'DM Sans',sans-serif; overflow-x:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:-3; background:radial-gradient(ellipse at 14% 5%,#ffe0e3 0,transparent 34%),radial-gradient(ellipse at 88% 22%,#ffebc8 0,transparent 32%),radial-gradient(ellipse at 52% 100%,#e7f0df 0,transparent 38%); }
+    .page { position:relative; min-height:100vh; padding:22px 24px 64px; }
+    .page::before,.page::after { content:'✿'; position:absolute; z-index:-1; color:#efb0b8; opacity:.55; font-size:clamp(90px,16vw,190px); animation:sway 8s ease-in-out infinite; }
+    .page::before { top:100px; left:-50px; transform:rotate(-20deg); }
+    .page::after { right:-38px; top:490px; color:#eccb7e; animation-delay:1.7s; }
+    .confetti-field { position:fixed; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
+    .confetti-dot { position:absolute; width:7px; height:12px; border-radius:8px; opacity:.7; animation:drift 9s ease-in-out infinite; }
+    .confetti-dot:nth-child(1){left:8%;top:34%;background:#f28ba2}.confetti-dot:nth-child(2){left:91%;top:14%;background:#efc25d;animation-delay:1s}.confetti-dot:nth-child(3){left:16%;top:79%;background:#a7cdb0;animation-delay:2s}.confetti-dot:nth-child(4){left:83%;top:67%;background:#c5a8d4;animation-delay:3s}.confetti-dot:nth-child(5){left:54%;top:12%;background:#f28ba2;animation-delay:1.5s}
+    .wrap { max-width:1120px; margin:0 auto; }
+    .masthead { display:flex; justify-content:space-between; align-items:center; max-width:1050px; margin:0 auto 15px; padding:4px 4px; color:#9b7787; font-size:11px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; animation:fade-up .8s both; }
+    .masthead .spark { color:var(--coral); font-size:17px; margin-right:7px; }
+    .hero { position:relative; min-height:700px; display:grid; grid-template-columns: .95fr 1.05fr; align-items:center; gap:clamp(25px,5vw,72px); padding:clamp(34px,7vw,82px); background:rgba(255,253,250,.86); border:1px solid rgba(255,255,255,.92); border-radius:38px; box-shadow:0 30px 90px rgba(99,58,80,.14),0 6px 20px rgba(99,58,80,.05); overflow:hidden; isolation:isolate; }
+    .hero::before { content:''; position:absolute; z-index:-1; width:520px; height:520px; border-radius:50%; right:-118px; top:-130px; background:radial-gradient(circle at 35% 40%,#ffe2df,#ffe8c8 64%,transparent 65%); opacity:.8; }
+    .hero::after { content:''; position:absolute; z-index:-1; width:260px; height:260px; border-radius:50%; left:-100px; bottom:-130px; background:#e4f0df; }
+    .copy { position:relative; z-index:2; padding:0 0 16px; }
+    .kicker { display:inline-flex; align-items:center; gap:9px; color:var(--rose); text-transform:uppercase; letter-spacing:.19em; font-size:11px; font-weight:800; }
+    .kicker::before { content:'✦'; font-size:17px; color:var(--gold); }
+    h1 { margin:18px 0 12px; color:var(--plum); font:800 clamp(53px,7.2vw,92px)/.92 'Playfair Display',serif; letter-spacing:-.055em; }
+    h1 .hiya { display:block; width:max-content; max-width:100%; position:relative; margin:0 auto; color:var(--rose); font:400 clamp(96px,13.2vw,158px)/1.08 'Great Vibes',cursive; letter-spacing:-.035em; padding:.08em .08em .16em 0; background:linear-gradient(125deg,#c74268 5%,#e86783 48%,#f2a064 95%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:drop-shadow(0 4px 0 rgba(222,122,139,.12)); }
+    h1 .hiya::after { content:''; position:absolute; left:6%; right:3%; bottom:2px; height:7px; border-radius:50%; border-bottom:3px solid #efc66f; transform:rotate(-4deg); opacity:.9; }
+    h1 .turns { display:block; color:var(--plum); font:800 .55em/1.05 'Playfair Display',serif; letter-spacing:-.04em; margin-top:13px; }
+    .one-badge { display:inline-grid; place-items:center; width:73px; height:73px; margin:8px 0 9px 2px; border-radius:50%; color:#fff; background:var(--coral); font:700 39px 'Playfair Display',serif; box-shadow:0 8px 0 #e5a099,0 12px 20px #df9b8c66; transform:rotate(8deg); animation:bob 3s ease-in-out infinite; position:relative; }
+    .one-badge::after { content:'♥'; position:absolute; right:-16px; top:2px; color:var(--gold); font:22px 'DM Sans',sans-serif; animation:heartbeat 1.7s infinite; }
+    .intro { max-width:390px; color:#856d7c; font-size:16px; line-height:1.8; margin:12px 0 24px; }
+    .join-note { color:#ad7888; font:italic 17px 'Playfair Display',serif; }
+    .photo-stage { position:relative; width:100%; max-width:465px; justify-self:end; padding:15px; background:#fff; border-radius:29px; box-shadow:0 22px 46px rgba(102,58,76,.2); transform:rotate(2.5deg); animation:photo-in 1s .2s both,photo-hover 6s 1.2s ease-in-out infinite; }
+    .photo-stage::before { content:''; position:absolute; inset:8px; border:1px dashed #efbdc4; border-radius:23px; pointer-events:none; z-index:1; }
+    .photo-stage::after { content:'our little sunshine'; position:absolute; right:-29px; bottom:38px; background:#f3c66d; color:#77553d; padding:11px 17px; border-radius:4px 15px 15px 15px; font:italic 15px 'Pacifico',cursive; transform:rotate(-7deg); box-shadow:0 8px 15px #8e6c3b2b; }
+    .photo { display:block; width:100%; height:auto; border-radius:19px; }
+    .sticker { position:absolute; z-index:2; display:grid; place-items:center; filter:drop-shadow(0 5px 6px #7952543b); }
+    .sticker-heart { top:-35px; left:-37px; color:#f08092; font-size:67px; transform:rotate(-14deg); animation:bob 3.8s ease-in-out infinite; }
+    .sticker-star { top:38px; right:-35px; color:#edbf53; font-size:52px; transform:rotate(15deg); animation:spin-gentle 12s linear infinite; }
+    .sticker-flower { bottom:-28px; left:37px; color:#8bb596; font-size:46px; animation:spin-gentle 16s linear infinite reverse; }
+    .orbit { position:absolute; width:112px; height:112px; border:1px solid #dfb4c1; border-radius:50%; top:-48px; right:23%; animation:spin-gentle 18s linear infinite; }
+    .orbit::before { content:'✦'; position:absolute; top:6px; right:5px; color:var(--rose); font-size:20px; }
+    .ticket { position:relative; display:grid; grid-template-columns:1fr 1.1fr; max-width:990px; margin:-43px auto 0; background:#fffdf9; border-radius:25px; box-shadow:0 19px 55px rgba(99,58,80,.16); overflow:hidden; z-index:3; animation:fade-up .9s .3s both; }
+    .ticket-title { grid-column:1/-1; padding:27px 34px 5px; text-align:center; color:var(--plum); font:700 clamp(25px,3vw,36px) 'Playfair Display',serif; }
+    .ticket-title span { color:var(--rose); }
+    .ticket-invite { grid-column:1/-1; margin:0; padding:0 20px 17px; text-align:center; color:#ad7888; font:italic 15px 'Playfair Display',serif; }
+    .party-facts { display:grid; grid-template-columns:1fr 1fr; gap:13px; padding:10px 30px 30px 36px; }
+    .fact { display:flex; align-items:center; gap:13px; padding:14px; border-radius:17px; background:#fff4f2; border:1px solid #f8e6e3; transition:transform .25s,box-shadow .25s; }
+    .fact:hover { transform:translateY(-4px) rotate(-1deg); box-shadow:0 9px 18px #b46c7320; }
+    .fact:nth-child(2){background:#fff8e9;border-color:#f6ebd1}.fact:nth-child(3){background:#f1f7ef;border-color:#e3eddf}.fact:nth-child(4){background:#f6f0f8;border-color:#ebe0ef}
+    .fact-icon { flex:0 0 42px; height:42px; border-radius:14px; display:grid; place-items:center; background:#fff; font-size:21px; }
+    .fact small { display:block; color:#ad8b96; font-size:9px; letter-spacing:.15em; text-transform:uppercase; font-weight:800; margin-bottom:4px; }
+    .fact strong { color:var(--plum); font-size:13px; line-height:1.45; }
+    .venue { position:relative; margin:10px 30px 30px 0; padding:23px 25px; align-self:stretch; border-radius:19px; color:#fdfaf4; background:#5e435f; overflow:hidden; }
+    .venue::before { content:'✿'; position:absolute; right:10px; bottom:-56px; font-size:170px; color:#816880; opacity:.3; transform:rotate(-22deg); }
+    .venue-label { position:relative; margin:0 0 10px; color:#f2ce89; font-size:10px; letter-spacing:.18em; font-weight:800; text-transform:uppercase; }
+    .venue h2 { position:relative; margin:0 0 9px; font:700 22px/1.2 'Playfair Display',serif; }
+    .venue address { position:relative; color:#eadfe7; font-style:normal; font-size:12px; line-height:1.7; }
+    .venue-pin { position:relative; display:inline-flex; align-items:center; gap:7px; margin-top:15px; color:#f2ce89; font-size:11px; font-weight:700; letter-spacing:.04em; }
+    .map-link { position:relative; display:inline-flex; align-items:center; gap:9px; margin-top:18px; padding:11px 16px; color:#56394f; background:#ffe0a0; border-radius:999px; text-decoration:none; font-size:12px; font-weight:800; letter-spacing:.02em; box-shadow:0 5px 0 #d9aa61; transition:transform .2s ease,box-shadow .2s ease,background .2s ease; }
+    .map-link:hover { transform:translateY(-3px); box-shadow:0 8px 0 #d9aa61; background:#ffebbd; }
+    .map-link:active { transform:translateY(2px); box-shadow:0 2px 0 #d9aa61; }
+    .map-link:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+    .rsvp { grid-column:1/-1; padding:23px 30px 29px; text-align:center; background:#fff4f2; border-top:1px dashed #e8c9ce; }
+    .rsvp-title { margin:0 0 15px; color:var(--plum); font:700 22px 'Playfair Display',serif; }
+    .rsvp-title span { color:var(--rose); }
+    .rsvp-contacts { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
+    .rsvp-contact { display:flex; align-items:center; gap:12px; min-width:245px; padding:12px 16px; border-radius:16px; background:#fff; border:1px solid #f3deda; text-align:left; }
+    .rsvp-person { flex:1; }
+    .rsvp-person strong { display:block; color:var(--plum); font-size:13px; margin-bottom:3px; }
+    .rsvp-person a { color:#97717f; font-size:12px; font-weight:600; text-decoration:none; }
+    .rsvp-person a:hover { color:var(--rose); text-decoration:underline; }
+    .call-button { flex:0 0 39px; height:39px; display:grid; place-items:center; border-radius:50%; color:#fff; background:#81ae89; text-decoration:none; font-size:17px; transition:transform .2s,background .2s; }
+    .call-button:hover { transform:scale(1.1); background:#668f70; }
+    .call-button:focus-visible { outline:3px solid var(--rose); outline-offset:3px; }
+    .closing { margin:31px auto 0; text-align:center; color:#a77689; font:italic 17px 'Playfair Display',serif; }
+    .closing span { display:inline-block; color:var(--rose); animation:heartbeat 1.8s infinite; }
+    .flower-confetti { position:absolute; z-index:4; pointer-events:none; top:-30px; font-size:17px; animation:rain linear forwards; }
+    .sky-creatures { position:absolute; inset:0; z-index:5; pointer-events:none; overflow:hidden; }
+    .sky-creature { position:absolute; opacity:0; filter:drop-shadow(0 5px 5px rgba(96,58,80,.2)); will-change:transform,opacity; }
+    .sky-creature.fly { animation-name:creature-flight; animation-timing-function:cubic-bezier(.3,.7,.3,1); animation-fill-mode:both; }
+    .sky-unicorn { font-size:clamp(47px,7vw,76px); left:-100px; top:34%; }
+    .sky-butterfly { font-size:clamp(29px,4vw,43px); left:-70px; }
+    .sky-butterfly.two { font-size:clamp(24px,3.5vw,36px); }
+    @keyframes creature-flight { 0%{opacity:0;transform:translate3d(0,18px,0) rotate(-10deg) scale(.7)} 12%{opacity:1} 50%{transform:translate3d(var(--mid-x),-26px,0) rotate(8deg) scale(1.06)} 85%{opacity:1} 100%{opacity:0;transform:translate3d(var(--end-x),12px,0) rotate(-5deg) scale(.86)} }
+    .reveal { opacity:0; transform:translateY(25px); transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @keyframes fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes photo-in{from{opacity:0;transform:translateY(24px) rotate(-3deg) scale(.97)}to{opacity:1;transform:translateY(0) rotate(2.5deg) scale(1)}}
+    @keyframes photo-hover{0%,100%{translate:0 0}50%{translate:0 -8px}}
+    @keyframes bob{0%,100%{translate:0 0;rotate:-3deg}50%{translate:0 -7px;rotate:3deg}}
+    @keyframes heartbeat{0%,35%,65%,100%{scale:1}48%,78%{scale:1.18}}
+    @keyframes sway{0%,100%{rotate:-8deg}50%{rotate:9deg}}
+    @keyframes spin-gentle{to{rotate:360deg}}
+    @keyframes drift{0%,100%{translate:0 0;rotate:0}50%{translate:10px -18px;rotate:90deg}}
+    @keyframes rain{to{transform:translate3d(var(--x),110vh,0) rotate(650deg);opacity:0}}
+    @media(max-width:800px){
+      .page{padding:15px 16px 45px}.hero{min-height:unset;grid-template-columns:1fr;gap:43px;padding:50px clamp(24px,8vw,65px) 65px;text-align:center}.copy{padding:0}.kicker{justify-content:center}h1 span{transform-origin:center}.intro{margin:15px auto 20px}.photo-stage{justify-self:center;width:min(100%,450px);margin:8px 0 0}.ticket{margin:-33px 14px 0;grid-template-columns:1fr}.ticket-title{padding:25px 15px 4px}.ticket-invite{padding-bottom:14px}.party-facts{padding:10px 22px 20px}.venue{margin:0 22px 23px;text-align:center}.venue-pin{justify-content:center}.orbit{right:15%}
+    }
+    @media(max-width:520px){
+      .page{padding:11px 11px 36px}.masthead{font-size:9px;letter-spacing:.14em}.hero{border-radius:27px;padding:43px 24px 58px;gap:35px}.kicker{font-size:9px;letter-spacing:.14em}h1{font-size:clamp(50px,15vw,72px);margin-top:20px}h1 .hiya{font-size:clamp(104px,29vw,145px);margin:0 auto}h1 .turns{font-size:.58em;margin-top:12px}.one-badge{width:62px;height:62px;font-size:33px}.intro{font-size:14px}.photo-stage{padding:10px;border-radius:22px}.photo-stage::before{inset:6px;border-radius:17px}.photo{border-radius:14px}.photo-stage::after{right:-10px;bottom:24px;font-size:12px;padding:8px 12px}.sticker-heart{font-size:49px;left:-24px;top:-26px}.sticker-star{font-size:39px;right:-20px;top:27px}.sticker-flower{font-size:35px;left:23px;bottom:-22px}.ticket{margin:-25px 5px 0;border-radius:21px}.party-facts{gap:8px;padding:8px 13px 17px}.fact{gap:8px;padding:10px 8px;border-radius:14px}.fact-icon{flex-basis:34px;height:34px;border-radius:11px;font-size:18px}.fact strong{font-size:11px}.fact small{font-size:8px;letter-spacing:.1em}.venue{margin:0 13px 14px;padding:20px 17px}.venue h2{font-size:20px}.closing{font-size:15px;margin-top:24px}.orbit{width:79px;height:79px;top:-35px}.page::before{left:-75px;top:180px}.page::after{right:-78px;top:650px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="confetti-field" aria-hidden="true"><i class="confetti-dot"></i><i class="confetti-dot"></i><i class="confetti-dot"></i><i class="confetti-dot"></i><i class="confetti-dot"></i></div>
+  <main class="page">
+    <div class="sky-creatures" aria-hidden="true"><span class="sky-creature sky-unicorn">🦄</span><span class="sky-creature sky-butterfly">🦋</span><span class="sky-creature sky-butterfly two">🦋</span></div>
+    <div class="wrap">
+      <header class="masthead"><span><b class="spark">✦</b> A very special day</span><span>15 · 10 · 2026</span></header>
+      <section class="hero" aria-labelledby="headline">
+        <div class="copy">
+          <div class="kicker">A tiny human, a huge milestone</div>
+          <h1 id="headline"><span class="hiya">Hiya</span><span class="turns">turns one!</span></h1>
+          <div class="one-badge" aria-label="One year old">1</div>
+          <p class="intro">Our hearts have been a little fuller for one whole year. Come celebrate the giggles, the cuddles, and all the magic of Hiya's very first birthday!</p>
+          <div class="join-note">Cake, joy &amp; happy little moments await ♡</div>
+        </div>
+        <figure class="photo-stage">
+          <span class="sticker sticker-heart" aria-hidden="true">♥</span><span class="sticker sticker-star" aria-hidden="true">✦</span><span class="sticker sticker-flower" aria-hidden="true">✿</span><span class="orbit" aria-hidden="true"></span>
+          <img class="photo" src="hiya-first-birthday-collage.png" alt="Birthday collage of Hiya smiling in her pink dress, surrounded by flowers and birthday wishes" />
+        </figure>
+      </section>
+      <section class="ticket reveal" aria-labelledby="party-title">
+        <h2 class="ticket-title" id="party-title">Save a little <span>celebration</span> for us</h2>
+        <p class="ticket-invite">Come join the party and make her day extra special ♡</p>
+        <div class="party-facts">
+          <div class="fact"><span class="fact-icon" aria-hidden="true">🗓️</span><div><small>When</small><strong>Thursday<br />15 October 2026</strong></div></div>
+          <div class="fact"><span class="fact-icon" aria-hidden="true">🕖</span><div><small>Party time</small><strong>7:00 in the evening</strong></div></div>
+        </div>
+        <div class="venue">
+          <p class="venue-label">Meet us at the party</p>
+          <h2>Golden Era Banquet<br />&amp; Restaurant</h2>
+          <address>1st floor, Shyam Business Hub, Near Mukesh Industries, Naroda, Narol - Vatva Rd, Narolgam, Ahmedabad, Gujarat 382443</address>
+          <a class="map-link" href="https://maps.app.goo.gl/6WpLVa5yYwkinsyu8" target="_blank" rel="noopener noreferrer" aria-label="Find Golden Era Banquet and Restaurant on Google Maps">
+            <span aria-hidden="true">📍</span> Open in Google Maps <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <section class="rsvp" aria-label="RSVP contacts">
+          <h2 class="rsvp-title">Kindly <span>RSVP</span></h2>
+          <div class="rsvp-contacts">
+            <div class="rsvp-contact"><div class="rsvp-person"><strong>Bhoomit &amp; Kinjal Patel</strong><a href="tel:+917990321213">+91 79903 21213</a></div><a class="call-button" href="tel:+917990321213" aria-label="Call Bhoomit and Kinjal Patel">☎</a></div>
+            <div class="rsvp-contact"><div class="rsvp-person"><strong>Mahendrabhai Patel</strong><a href="tel:+919376988051">+91 93769 88051</a></div><a class="call-button" href="tel:+919376988051" aria-label="Call Mahendrabhai Patel">☎</a></div>
+          </div>
+        </section>
+      </section>
+      <p class="closing reveal">We can't wait to celebrate with you <span>♥</span></p>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const reveals = document.querySelectorAll('.reveal');
+      const skyCreatures = document.querySelector('.sky-creatures');
+      let lastFlight = 0;
+      let flightTimer;
+      const flyBy = () => {
+        if (reduced || !skyCreatures || performance.now() - lastFlight < 2100) return;
+        lastFlight = performance.now();
+        skyCreatures.querySelectorAll('.sky-creature').forEach((creature, index) => {
+          if (Math.random() > .72) return;
+          creature.classList.remove('fly');
+          creature.style.top = `${7 + Math.random() * 82}%`;
+          creature.style.left = `${Math.random() * 38 - 12}vw`;
+          creature.style.setProperty('--mid-x', `${40 + Math.random() * 35}vw`);
+          creature.style.setProperty('--end-x', `${105 + Math.random() * 22}vw`);
+          creature.style.animationDelay = `${Math.random() * 1.1}s`;
+          creature.style.animationDuration = `${3.4 + Math.random() * 3.7}s`;
+          void creature.offsetWidth;
+          creature.classList.add('fly');
+        });
+      };
+      const queueFlight = () => {
+        window.clearTimeout(flightTimer);
+        flightTimer = window.setTimeout(flyBy, 500 + Math.random() * 1700);
+      };
+      window.addEventListener('scroll', queueFlight, { passive:true });
+      window.addEventListener('load', () => { flightTimer = window.setTimeout(flyBy, 700 + Math.random() * 2600); }, { once:true });
+      if ('IntersectionObserver' in window && !reduced) {
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        }), { threshold: .16 });
+        reveals.forEach(el => observer.observe(el));
+      } else reveals.forEach(el => el.classList.add('visible'));
+      if (reduced) return;
+      const colors = ['🌸','✦','♥','✿','•'];
+      for (let i = 0; i < 32; i++) {
+        const bit = document.createElement('span');
+        bit.className = 'flower-confetti'; bit.setAttribute('aria-hidden','true');
+        bit.textContent = colors[i % colors.length]; bit.style.left = `${Math.random()*100}vw`;
+        bit.style.color = ['#e88098','#edbd55','#86b796','#b792c6'][i%4];
+        bit.style.setProperty('--x',`${(Math.random()-.5)*180}px`);
+        bit.style.animationDuration = `${4+Math.random()*4}s`; bit.style.animationDelay = `${Math.random()*2}s`;
+        document.body.appendChild(bit); window.setTimeout(() => bit.remove(), 9000);
+      }
+    })();
+  </script>
+</body>
+</html>
